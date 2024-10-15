@@ -1,4 +1,5 @@
-![image](https://github.com/user-attachments/assets/a09200b2-6059-44ea-a49a-e6b4c72ca790)
+![image](https://github.com/user-attachments/assets/877da1fe-0531-47cf-8ea8-ac7758d36b87)
+
 # FreelanceChain
 FreelanceChain is a decentralized freelancing that connects designers (freelancers) with clients, enabling secure and transparent job postings, applications, and payments through smart contracts.
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------
