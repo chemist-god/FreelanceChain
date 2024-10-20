@@ -1,29 +1,147 @@
-![image](https://github.com/user-attachments/assets/877da1fe-0531-47cf-8ea8-ac7758d36b87)
 
-# FreelanceChain
-FreelanceChain is a decentralized freelancing that connects designers (freelancers) with clients, enabling secure and transparent job postings, applications, and payments through smart contracts.
---------------------------------------------------------------------------------------------------------------------------------------------------------------------
-Real-Life Problems Solved by FreelanceChain
+# **FreelanceChain**
 
-1. Lack of Trust Between Freelancers and Clients
-Problem: Freelancers and clients often don’t trust each other fully because online reviews can be faked, and payment issues or disputes can arise.
-Solution: FreelanceChain uses blockchain to make every review, payment, and job record tamper-proof. This means no one can alter them, building trust between both parties.
+**FreelanceChain** is a decentralized freelancing platform designed to connect designers and clients seamlessly. By leveraging blockchain technology, FreelanceChain ensures secure, transparent, and efficient collaboration between freelancers and clients through the use of smart contracts and cryptocurrency-based payments.
 
-2. Delayed or Missed Payments
-Problem: Freelancers sometimes face delayed payments, or worse, don’t get paid at all after completing a job.
-Solution: FreelanceChain uses smart contracts to hold payments in escrow. When a job is done, the smart contract automatically releases the payment to the freelancer, ensuring they get paid on time, every time.
+![image](https://github.com/user-attachments/assets/6accd636-e6b9-479e-8467-6b48087dddde)
 
-3. High Fees on Traditional Freelance Platforms
-Problem: Popular freelancing websites charge high fees (10-20%) on each transaction, cutting into freelancers' earnings.
-Solution: By removing unnecessary middlemen and using blockchain, FreelanceChain significantly reduces fees, allowing freelancers to keep more of what they earn.
 
-4. No Rewards for Active Participation
-Problem: Freelancers and clients don’t get additional benefits or rewards for being active on the platform or delivering good work.
-Solution: In future versions, FreelanceChain can offer token rewards for users who contribute actively to the platform, whether by completing jobs, referring others, or improving the system.
+---
 
-5. Security Risks and Privacy Concerns
-Problem: Traditional platforms can be vulnerable to hacks, and user data may be at risk. Users also have to share a lot of personal information.
-Solution: FreelanceChain allows users to sign in using their cryptocurrency wallets, so there’s no need to share sensitive personal data. The blockchain also secures all transactions and interactions, protecting users from security breaches.
---------------------------------------------------------------------------------------------------------------------------------------------------------------------
-FreelanceChain solves key problems in the freelancing world by using blockchain to create a more secure, trustworthy, and efficient platform for both freelancers and clients. By reducing fees, ensuring timely payments, and giving freelancers more control over their work, it provides a better experience for all users.
-By leveraging blockchain technology, FreelanceChain offers innovative solutions that enhance trust, security, efficiency, and transparency
+## **Table of Contents**
+
+1. [Overview](#overview)
+2. [Core Features](#core-features)
+3. [Technology Stack](#technology-stack)
+4. [User Flow](#user-flow)
+5. [Smart Contracts Development](#smart-contracts-development)
+6. [Security and Privacy](#security-and-privacy)
+7. [Real-Life Problem Solved](#real-life-problem-solved)
+8. [Installation Guide](#installation-guide)
+9. [License](#license)
+
+---
+
+## **Overview**
+
+FreelanceChain is built to empower designers by offering a decentralized platform where they can showcase their work, connect with potential clients, and receive secure payments in a trustless, blockchain-powered environment. It solves the traditional problems faced by freelancers, such as delayed payments, high platform fees, and limited control over their portfolios.
+
+With a user-friendly interface and strong backend, FreelanceChain makes freelancing more accessible and efficient for designers, while clients benefit from transparent project management and instant payment processing through smart contracts.
+
+---
+
+## **Core Features**
+
+- **Decentralized Platform:** No central authority, all interactions are managed via blockchain.
+- **Smart Contracts for Payments:** Automated escrow services ensure freelancers get paid on time.
+- **Low Transaction Fees:** Minimal platform fees thanks to blockchain, allowing freelancers to keep more of their earnings.
+- **Global Accessibility:** Freelancers can join from anywhere in the world using cryptocurrency.
+- **Portfolio Ownership:** Designers have full control over their work, stored securely on decentralized storage solutions like IPFS.
+- **Wallet Integration:** Users can connect their wallets (e.g., MetaMask) to the platform for seamless payments and interactions.
+
+---
+
+## **Technology Stack**
+Frontend:
+- **Next.js**: A React-based framework for server-side rendering and static web applications.
+- **TypeScript**: Strongly typed JavaScript for building scalable and maintainable code.
+- **Tailwind CSS**: A utility-first CSS framework for rapid UI development.
+- **OnchainKit**: Provides support for blockchain interaction using the Fleek template.
+- **OnchainProviders**: Used for integrating Web3 wallet providers.
+  
+Backend:
+
+- **Smart Contracts**: Developed in Solidity, deployed on the Base network.
+Blockchain:
+
+- **Base Network**: A Layer 2 Ethereum network optimized for decentralized applications.
+- **Wallet Integration**: Supports crypto wallet connections using Web3.
+
+Deployment:
+- **Fleek Onchainkit**: For deploying decentralized web applications (dApps).
+  
+---
+
+## **User Flow**
+
+1. **Sign Up / Log In**: Users create an account or log in using their wallet.
+2. **Create Profile**: Freelancers set up a profile, showcase their work, and define their services.
+3. **Browse Jobs / Hire Freelancer**: Clients can browse designer profiles or post job opportunities.
+4. **Smart Contract Escrow**: Once a job is agreed upon, a smart contract is deployed, holding the payment in escrow until the job is completed.
+5. **Project Completion & Payment**: After completion, the smart contract automatically releases the payment to the freelancer.
+6. **Ratings & Reviews**: Both parties rate each other to build trust in the community.
+
+---
+
+## **Smart Contracts Development**
+
+The smart contracts developed for FreelanceChain handle critical operations:
+
+- **Job Creation**: Smart contracts are created for each freelance job, specifying deliverables, deadlines, and payment details.
+- **Escrow Service**: Payments are held in a secure escrow account until job completion.
+- **Job Completion and Verification**: Upon job approval by the client, the smart contract triggers the release of funds to the freelancer's wallet.
+- **Dispute Handling**: Dispute mechanisms can be incorporated to mediate disagreements between freelancers and clients.
+
+**Main Contract Methods:**
+
+- `createJob(jobDetails, paymentAmount)`
+- `releasePayment()`
+- `raiseDispute()`
+  
+The smart contract logic ensures that both parties are protected, payments are automatic, and there’s no room for fraud or manipulation.
+
+---
+
+## **Security and Privacy**
+
+Security is a top priority for FreelanceChain. The platform incorporates:
+
+- **Wallet-based Login**: Users authenticate via their wallets (e.g., MetaMask), reducing the need for personal data.
+- **Smart Contracts**: Payment automation ensures no sensitive data is involved, and blockchain ensures all transactions are immutable.
+- **Data Protection**: Portfolios and job details are stored on decentralized networks like IPFS, ensuring privacy and reducing the risk of data breaches.
+
+---
+
+## **Real-Life Problem Solved**
+
+FreelanceChain addresses several real-world issues faced by freelancers and clients:
+
+1. **Trust Issues**: Blockchain-based reviews and ratings are immutable, creating transparency.
+2. **Delayed Payments**: Smart contract escrow guarantees freelancers get paid on time.
+3. **High Fees**: Traditional platforms charge significant transaction fees, but FreelanceChain reduces these with blockchain’s efficiency.
+4. **Global Access**: Freelancers from underbanked regions can participate using cryptocurrency.
+5. **Portfolio Ownership**: Designers retain control of their work on a decentralized platform.
+
+---
+
+## **Installation Guide**
+
+To get started with FreelanceChain locally:
+
+1. **Clone the repository**:
+   ```bash
+   git clone https://github.com/chemist-god/FreelanceChain.git
+   cd FreelanceChain
+   ```
+
+2. **Install dependencies**:
+   ```bash
+   npm install
+   ```
+
+3. **Start the development server**:
+   ```bash
+   npm start
+   ```
+
+4. **Deploy Smart Contracts**:
+   - Follow the setup on **Base blockchain** using the guide: [Base Documentation](https://onchainkit.xyz/getting-started)
+   - Use MetaMask to connect your wallet and deploy smart contracts.
+
+---
+
+## **License**
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+---
