@@ -1,147 +1,72 @@
+This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
-# **FreelanceChain**
+## Getting Started
 
-**FreelanceChain** is a decentralized freelancing platform designed to connect designers and clients seamlessly. By leveraging blockchain technology, FreelanceChain ensures secure, transparent, and efficient collaboration between freelancers and clients through the use of smart contracts and cryptocurrency-based payments.
+First, run the development server:
 
-![image](https://github.com/user-attachments/assets/6accd636-e6b9-479e-8467-6b48087dddde)
+```bash
+npm run dev
+# or
+yarn dev
+# or
+pnpm dev
+# or
+bun dev
+```
 
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
----
+You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
-## **Table of Contents**
+This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
-1. [Overview](#overview)
-2. [Core Features](#core-features)
-3. [Technology Stack](#technology-stack)
-4. [User Flow](#user-flow)
-5. [Smart Contracts Development](#smart-contracts-development)
-6. [Security and Privacy](#security-and-privacy)
-7. [Real-Life Problem Solved](#real-life-problem-solved)
-8. [Installation Guide](#installation-guide)
-9. [License](#license)
+## Learn More
 
----
+To learn more about Next.js, take a look at the following resources:
 
-## **Overview**
+- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
+- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
-FreelanceChain is built to empower designers by offering a decentralized platform where they can showcase their work, connect with potential clients, and receive secure payments in a trustless, blockchain-powered environment. It solves the traditional problems faced by freelancers, such as delayed payments, high platform fees, and limited control over their portfolios.
+You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
 
-With a user-friendly interface and strong backend, FreelanceChain makes freelancing more accessible and efficient for designers, while clients benefit from transparent project management and instant payment processing through smart contracts.
+## Deploy on fleek
 
----
+[Fleek](https://fleek.xyz) is a platform that allows you to deploy your website on IPFS and host it for free.
 
-## **Core Features**
+This guide will show you how to do deploy your SE-2 build to Fleek.
 
-- **Decentralized Platform:** No central authority, all interactions are managed via blockchain.
-- **Smart Contracts for Payments:** Automated escrow services ensure freelancers get paid on time.
-- **Low Transaction Fees:** Minimal platform fees thanks to blockchain, allowing freelancers to keep more of their earnings.
-- **Global Accessibility:** Freelancers can join from anywhere in the world using cryptocurrency.
-- **Portfolio Ownership:** Designers have full control over their work, stored securely on decentralized storage solutions like IPFS.
-- **Wallet Integration:** Users can connect their wallets (e.g., MetaMask) to the platform for seamless payments and interactions.
+## ✅ Getting Started
 
----
+1/ Goto [Fleek app](https://app.fleek.xyz/) to create your own Fleek account
 
-## **Technology Stack**
-Frontend:
-- **Next.js**: A React-based framework for server-side rendering and static web applications.
-- **TypeScript**: Strongly typed JavaScript for building scalable and maintainable code.
-- **Tailwind CSS**: A utility-first CSS framework for rapid UI development.
-- **OnchainKit**: Provides support for blockchain interaction using the Fleek template.
-- **OnchainProviders**: Used for integrating Web3 wallet providers.
-  
-Backend:
+2/ From your local computer, login into Fleek with this command:
 
-- **Smart Contracts**: Developed in Solidity, deployed on the Base network.
-Blockchain:
+To deploy your dapp to Fleek, run this command:
 
-- **Base Network**: A Layer 2 Ethereum network optimized for decentralized applications.
-- **Wallet Integration**: Supports crypto wallet connections using Web3.
+```shell
+yarn fleek:login
+```
 
-Deployment:
-- **Fleek Onchainkit**: For deploying decentralized web applications (dApps).
-  
----
+## 🚀 Deploy to Fleek
 
-## **User Flow**
+```shell
+yarn fleek:deploy
+```
 
-1. **Sign Up / Log In**: Users create an account or log in using their wallet.
-2. **Create Profile**: Freelancers set up a profile, showcase their work, and define their services.
-3. **Browse Jobs / Hire Freelancer**: Clients can browse designer profiles or post job opportunities.
-4. **Smart Contract Escrow**: Once a job is agreed upon, a smart contract is deployed, holding the payment in escrow until the job is completed.
-5. **Project Completion & Payment**: After completion, the smart contract automatically releases the payment to the freelancer.
-6. **Ratings & Reviews**: Both parties rate each other to build trust in the community.
+First time it will ask you to init your project, use these params:
 
----
+- directory `out`
+- optional build `no`
+- config format `JSON`
 
-## **Smart Contracts Development**
+Your app will be build then uploaded to Fleek.
 
-The smart contracts developed for FreelanceChain handle critical operations:
+For example, this repo is deployed to https://thundering-dawn-hissing.on-fleek.app/
 
-- **Job Creation**: Smart contracts are created for each freelance job, specifying deliverables, deadlines, and payment details.
-- **Escrow Service**: Payments are held in a secure escrow account until job completion.
-- **Job Completion and Verification**: Upon job approval by the client, the smart contract triggers the release of funds to the freelancer's wallet.
-- **Dispute Handling**: Dispute mechanisms can be incorporated to mediate disagreements between freelancers and clients.
+## 🚫 Limitations
 
-**Main Contract Methods:**
+Note that decentralized storage as IPFS, requires `client only` application (i.e. SPA [`Single Page Application`](https://blogonyourown.com/single-page-application/)) without server side.
 
-- `createJob(jobDetails, paymentAmount)`
-- `releasePayment()`
-- `raiseDispute()`
-  
-The smart contract logic ensures that both parties are protected, payments are automatic, and there’s no room for fraud or manipulation.
+With NextJs this is possible by using [Static HTML Export](https://nextjs.org/docs/app/building-your-application/deploying#static-html-export). Nevertheless, note that dynamic routing is not possible, so for example instead of using https://myblog.com/posts/[postId], you will have to use https://myblog.com/posts/?postId=[postId].
 
----
-
-## **Security and Privacy**
-
-Security is a top priority for FreelanceChain. The platform incorporates:
-
-- **Wallet-based Login**: Users authenticate via their wallets (e.g., MetaMask), reducing the need for personal data.
-- **Smart Contracts**: Payment automation ensures no sensitive data is involved, and blockchain ensures all transactions are immutable.
-- **Data Protection**: Portfolios and job details are stored on decentralized networks like IPFS, ensuring privacy and reducing the risk of data breaches.
-
----
-
-## **Real-Life Problem Solved**
-
-FreelanceChain addresses several real-world issues faced by freelancers and clients:
-
-1. **Trust Issues**: Blockchain-based reviews and ratings are immutable, creating transparency.
-2. **Delayed Payments**: Smart contract escrow guarantees freelancers get paid on time.
-3. **High Fees**: Traditional platforms charge significant transaction fees, but FreelanceChain reduces these with blockchain’s efficiency.
-4. **Global Access**: Freelancers from underbanked regions can participate using cryptocurrency.
-5. **Portfolio Ownership**: Designers retain control of their work on a decentralized platform.
-
----
-
-## **Installation Guide**
-
-To get started with FreelanceChain locally:
-
-1. **Clone the repository**:
-   ```bash
-   git clone https://github.com/chemist-god/FreelanceChain.git
-   cd FreelanceChain
-   ```
-
-2. **Install dependencies**:
-   ```bash
-   npm install
-   ```
-
-3. **Start the development server**:
-   ```bash
-   npm start
-   ```
-
-4. **Deploy Smart Contracts**:
-   - Follow the setup on **Base blockchain** using the guide: [Base Documentation](https://onchainkit.xyz/getting-started)
-   - Use MetaMask to connect your wallet and deploy smart contracts.
-
----
-
-## **License**
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
----
+For existing application, you may have to modify internal links: between absolute link (like `https://website.io/image.png`), related links (like `image.png` or `./image.png`) and root link (like `/image.png`).
